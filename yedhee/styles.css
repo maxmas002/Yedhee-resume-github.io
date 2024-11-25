@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f82fb5e4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center; /* Center all content */
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #1e3d58;
+}
+
+p, ul, ol {
+    margin: 10px 0;
+}
+
+a {
+    color: #1e3d58;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    margin-top: 30px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #5900ff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #f735d6;
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 0, 191);
+    font-size: 30px;
+}
+
+/* Profile Picture */
+.profile-pic img {
+    width: 220px;  /* กำหนดขนาดให้รูปภาพ */
+    height: 220px; /* กำหนดความสูงให้เท่ากับความกว้าง */
+    border-radius: 50%;  /* ทำให้รูปภาพกลม */
+    border: 5px solid #f847db;  /* กรอบรอบๆ รูปภาพ */
+    margin: 20px auto;  /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    object-fit: cover;  /* ให้รูปภาพไม่ถูกบิดเบือนหากขนาดไม่พอดี */
+}
+
+
+.skill img {
+    width: 80px;  /* กำหนดขนาดให้รูปภาพ */
+    height: 80px; /* กำหนดความสูงให้เท่ากับความกว้าง */
+    border-radius: 50%;  /* ทำให้รูปภาพกลม */
+    border: 5px solid #ff0000;  /* กรอบรอบๆ รูปภาพ */
+    margin: 20px auto;  /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    object-fit: cover;  /* ให้รูปภาพไม่ถูกบิดเบือนหากขนาดไม่พอดี */
+}
+
+/* Banner Image */
+.banner {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner-img {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+}
+
+.Cats {
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+    flex-direction: column; /* วางเนื้อหาในแนวตั้ง */
+    width: 100%; /* ใช้เต็มความกว้าง */
+    height: 100vh; /* ใช้เต็มความสูงของหน้าจอ */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    margin: 0; /* ยกเลิก margin */
+}
+
+.cat-img {
+    width: 50%; /* ปรับขนาดรูปภาพ */
+    max-width: 300px; /* กำหนดขนาดสูงสุด */
+    height: auto; /* รักษาอัตราส่วน */
+    margin-bottom: 5px; /* ระยะห่างระหว่างรูปภาพกับข้อความ */
+}
+
+/* Bottom Container for Social Links */
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-link {
+    width: 40px;  /* Set size for all images */
+    height: 40px;  /* Make them equal height and width */
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.image-link:hover {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .navbar.show {
+        display: block;
+    }
+
+    .image-link {
+        width: 35px;  /* Adjust icon size on smaller screens */
+        height: 35px;
+    }
+}
